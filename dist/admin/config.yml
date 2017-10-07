@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="../assets/css/app.css">
+  </head>
+  <body>
+
+    backend:
+      name: github
+      repo: owner/repo # Path to your Github repository
+      branch: master # Branch to update (master by default)
+    
+    media_folder: "img/uploads" # Folder where user uploaded files should go
+    
+    collections: # A list of collections the CMS should be able to edit
+      - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
+        label: "Post" # Used in the UI, e.g., "New Post"
+        folder: "_posts" # The path to the folder where the documents are stored
+        create: true # Allow users to create new documents in this collection
+        fields: # The fields each document in this collection have
+          - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Foo", name: "foo", widget: "foo"}
+          - {label: "Publish Date", name: "date", widget: "datetime"}
+
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>
