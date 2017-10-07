@@ -11,11 +11,11 @@
   <body>
 
     backend:
-      name: github
-      repo: owner/repo # Path to your Github repository
+      name: netlify-cms
+      repo: https://github.com/condensation/netlify-cms # Path to your Github repository
       branch: master # Branch to update (master by default)
     
-    media_folder: "img/uploads" # Folder where user uploaded files should go
+    media_folder: "assets/img" # Folder where user uploaded files should go
     
     collections: # A list of collections the CMS should be able to edit
       - name: "post" # Used in routes, e.g., /admin/collections/:slug/edit
